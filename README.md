@@ -1,0 +1,1 @@
+# smrt-tab-pro-teze-gtp5pro
