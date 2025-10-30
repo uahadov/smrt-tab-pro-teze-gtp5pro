@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Smart Tab Pro",
+  "version": "1.0",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://nominatim.openstreetmap.org/*",
+    "https://api.openweathermap.org/*",
+    "https://api.rss2json.com/*",
+    "https://api.coingecko.com/*",
+    "https://api.exchangerate-api.com/*"
+  ],
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  }
+}

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Tab Pro</title>
+  <link rel="icon" type="image/png" href="icons/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body data-theme="dark">
+  <!-- Düzen Modu Butonu - Sol üstte -->
+  <button id="layoutModeBtn" class="layout-mode-btn draggable-element" data-element-id="layout-mode-btn" title="Düzen Modunu Aç/Kapat">📐</button>
+  
+  <!-- Ayarlar Butonu - Orijinal yerinde (sağ üst) -->
+  <button id="settingsBtn" class="settings-btn draggable-element" data-element-id="settings-btn">⚙️</button>
+  
+  <!-- Ayarlar Paneli -->
+  <div class="settings-panel">
+    <div class="settings-header">
+      <h3>SmartTab Pro Ayarları</h3>
+      <button id="closeSettings" class="close-btn">×</button>
+    </div>
+    
+    <div class="settings-content">
+      <!-- Düzen Ayarları -->
+      <div class="settings-section">
+        <h4>📐 Düzen Ayarları</h4>
+        <div class="setting-item">
+          <button id="layoutModeToggle" class="primary-btn full-width">📐 Düzen Modunu Aç</button>
+          <p class="setting-description">Düzen modunda tüm öğeleri sürükleyerek yerlerini değiştirebilir ve boyutlarını ayarlayabilirsiniz.</p>
+        </div>
+        <div class="setting-item">
+          <label class="toggle-label">
+            <input type="checkbox" id="showLayoutBtn" checked>
+            <span class="toggle-slider"></span>
+            <span class="toggle-text">📐 Düzen Butonu Göster</span>
+          </label>
+        </div>
+        <div class="setting-item">
+          <button id="resetLayout" class="secondary-btn full-width">🔄 Düzeni Sıfırla</button>
+        </div>
+      </div>
+
+      <!-- Tema Ayarları -->
+      <div class="settings-section">
+        <h4>🎨 Tema Ayarları</h4>
+        <div class="setting-item">
+          <label>Tema Seçimi:</label>
+          <select id="themeSelector" class="styled-select">
+            <option value="dark">🌙 Koyu Tema</option>
+            <option value="light">☀️ Açık Tema</option>
+            <option value="sunset">🌅 Günbatımı</option>
+            <option value="ocean">🌊 Okyanus</option>
+            <option value="forest">🌲 Orman</option>
+            <option value="purple">💜 Mor Tema</option>
+            <option value="custom">🎨 Özel Renk</option>
+          </select>
+        </div>
+        <div class="setting-item" id="customColorSection" style="display: none;">
+          <label>Özel Renk Seçici:</label>
+          <div class="color-picker-container">
+            <input type="color" id="customColorPicker" value="#6c5ce7">
+            <span class="color-preview"></span>
+          </div>
+        </div>
+        <div class="setting-item">
+          <label>Arka Plan:</label>
+          <div class="background-controls">
+            <input type="file" id="bgUpload" accept="image/*" class="file-input">
+            <button id="removeBgBtn" class="danger-btn">Arka Planı Kaldır</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Widget Ayarları -->
+      <div class="settings-section">
+        <h4>📊 Widget Ayarları</h4>
+        <div class="widget-grid">
+          <div class="widget-toggle">
+            <label class="toggle-label">
+              <input type="checkbox" name="datetime" checked>
+              <span class="toggle-slider"></span>
+              <span class="toggle-text">🕐 Saat & Tarih</span>
+            </label>
+          </div>
+          <div class="widget-toggle">
+            <label class="toggle-label">
+              <input type="checkbox" name="weather" checked>
+              <span class="toggle-slider"></span>
+              <span class="toggle-text">🌤️ Hava Durumu</span>
+            </label>
+          </div>
+          <div class="widget-toggle">
+            <label class="toggle-label">
+              <input type="checkbox" name="crypto" checked>
+              <span class="toggle-slider"></span>
+              <span class="toggle-text">₿ Kripto Takip</span>
+            </label>
+          </div>
+          <div class="widget-toggle">
+            <label class="toggle-label">
+              <input type="checkbox" name="stocks" checked>
+              <span class="toggle-slider"></span>
+              <span class="toggle-text">📈 Borsa</span>
+            </label>
+          </div>
+          <div class="widget-toggle">
+            <label class="toggle-label">
+              <input type="checkbox" name="news" checked>
+              <span class="toggle-slider"></span>
+              <span class="toggle-text">📰 Haberler</span>
+            </label>
+          </div>
+          <div class="widget-toggle">
+            <label class="toggle-label">
+              <input type="checkbox" name="quote" checked>
+              <span class="toggle-slider"></span>
+              <span class="toggle-text">💭 Günün Sözü</span>
+            </label>
+          </div>
+          <div class="widget-toggle">
+            <label class="toggle-label">
+              <input type="checkbox" name="pomodoro" checked>
+              <span class="toggle-slider"></span>
+              <span class="toggle-text">🍅 Pomodoro</span>
+            </label>
+          </div>
+          <div class="widget-toggle">
+            <label class="toggle-label">
+              <input type="checkbox" name="todo" checked>
+              <span class="toggle-slider"></span>
+              <span class="toggle-text">✅ Yapılacaklar</span>
+            </label>
+          </div>
+          <div class="widget-toggle">
+            <label class="toggle-label">
+              <input type="checkbox" name="notes" checked>
+              <span class="toggle-slider"></span>
+              <span class="toggle-text">📝 Notlar</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Haberler Ayarları -->
+      <div class="settings-section">
+        <h4>📰 Haber Ayarları</h4>
+        <div class="setting-item">
+          <label>Gösterilecek Haber Sayısı:</label>
+          <select id="newsCount" class="styled-select">
+            <option value="3">3 Haber</option>
+            <option value="5" selected>5 Haber</option>
+            <option value="8">8 Haber</option>
+            <option value="10">10 Haber</option>
+            <option value="15">15 Haber</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Pomodoro Ayarları -->
+      <div class="settings-section">
+        <h4>🍅 Pomodoro Ayarları</h4>
+        <div class="setting-item">
+          <label>Çalışma Süresi (dakika):</label>
+          <input type="number" id="pomodoroWorkTime" min="1" max="60" value="25" class="styled-input">
+        </div>
+        <div class="setting-item">
+          <label>Mola Süresi (dakika):</label>
+          <input type="number" id="pomodoroBreakTime" min="1" max="30" value="5" class="styled-input">
+        </div>
+      </div>
+
+      <!-- Kripto Ayarları -->
+      <div class="settings-section">
+        <h4>₿ Kripto Ayarları</h4>
+        <div class="setting-item">
+          <label>Takip Edilen Kriptolar:</label>
+          <div class="crypto-selection">
+            <div id="selectedCryptos" class="selected-items"></div>
+            <div class="add-crypto-form">
+              <select id="cryptoSelector" class="styled-select">
+                <!-- Dinamik olarak doldurulacak -->
+              </select>
+              <button id="addCrypto" class="primary-btn">+ Ekle</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Borsa Ayarları -->
+      <div class="settings-section">
+        <h4>📈 Borsa Ayarları</h4>
+        <div class="setting-item">
+          <label>Takip Edilen Hisseler:</label>
+          <div class="stock-selection">
+            <div id="selectedStocks" class="selected-items"></div>
+            <div class="add-stock-form">
+              <select id="stockSelector" class="styled-select">
+                <!-- Dinamik olarak doldurulacak -->
+              </select>
+              <button id="addStock" class="primary-btn">+ Ekle</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Link Yönetimi -->
+      <div class="settings-section">
+        <h4>🔗 Link Yönetimi</h4>
+        <div class="setting-item">
+          <label>Yeni Link Ekle:</label>
+          <div class="link-add-form">
+            <input type="text" id="customName" placeholder="Site Adı" class="styled-input">
+            <input type="url" id="customUrl" placeholder="https://ornek.com" class="styled-input">
+            <select id="customCategory" class="styled-select">
+              <option value="social">📱 Sosyal Medya</option>
+              <option value="ai">🤖 Yapay Zeka</option>
+            </select>
+            <button id="addCustom" class="primary-btn">+ Ekle</button>
+          </div>
+        </div>
+        <div class="setting-item">
+          <button id="removeLinkBtn" class="danger-btn full-width">🗑️ Link Kaldırma Modunu Aç</button>
+        </div>
+      </div>
+
+      <!-- Gelişmiş Ayarlar -->
+      <div class="settings-section">
+        <h4>⚙️ Gelişmiş Ayarlar</h4>
+        <div class="setting-item">
+          <label>Otomatik Yenileme:</label>
+          <select id="refreshInterval" class="styled-select">
+            <option value="300000">5 Dakika</option>
+            <option value="600000">10 Dakika</option>
+            <option value="1800000">30 Dakika</option>
+            <option value="3600000">1 Saat</option>
+            <option value="0">Kapalı</option>
+          </select>
+        </div>
+        <div class="setting-item">
+          <label>Kripto/Borsa Yenileme:</label>
+          <select id="marketRefreshInterval" class="styled-select">
+            <option value="30000">30 Saniye</option>
+            <option value="60000">1 Dakika</option>
+            <option value="300000">5 Dakika</option>
+            <option value="600000">10 Dakika</option>
+            <option value="0">Kapalı</option>
+          </select>
+        </div>
+        <div class="setting-item">
+          <label class="toggle-label">
+            <input type="checkbox" id="animationsEnabled" checked>
+            <span class="toggle-slider"></span>
+            <span class="toggle-text">✨ Animasyonları Etkinleştir</span>
+          </label>
+        </div>
+        <div class="setting-item">
+          <label class="toggle-label">
+            <input type="checkbox" id="soundEnabled" checked>
+            <span class="toggle-slider"></span>
+            <span class="toggle-text">🔊 Ses Efektleri</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Veri Yönetimi -->
+      <div class="settings-section">
+        <h4>💾 Veri Yönetimi</h4>
+        <div class="data-controls">
+          <button id="exportData" class="secondary-btn">📤 Ayarları Dışa Aktar</button>
+          <button id="importData" class="secondary-btn">📥 Ayarları İçe Aktar</button>
+          <input type="file" id="importFile" accept=".json" style="display: none;">
+          <button id="resetData" class="danger-btn">🔄 Tüm Ayarları Sıfırla</button>
+        </div>
+      </div>
+
+      <!-- Hakkında -->
+      <div class="settings-section">
+        <h4>ℹ️ Hakkında</h4>
+        <div class="about-info">
+          <p><strong>SmartTab Pro</strong> v3.0</p>
+          <p>Gelişmiş yeni sekme deneyimi</p>
+          <div class="about-links">
+            <a href="#" class="about-link">📖 Kullanım Kılavuzu</a>
+            <a href="#" class="about-link">🐛 Hata Bildir</a>
+            <a href="#" class="about-link">⭐ Değerlendir</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sol Panel - Orijinal pozisyon -->
+  <div class="panel left-panel datetime-widget draggable-element" data-element-id="datetime-widget">
+    <div id="location">Yükleniyor...</div>
+    <div id="date"></div>
+    <div id="time"></div>
+  </div>
+
+  <!-- Sağ Panel - Orijinal pozisyon -->
+  <div class="panel right-panel weather-widget draggable-element" data-element-id="weather-widget">
+    <div id="weather">
+      <div id="temperature">--°C</div>
+      <div id="humidity">Nem: --%</div>
+      <button id="refreshWeather" class="refresh-weather-btn" title="Hava Durumunu Yenile">↻</button>
+    </div>
+  </div>
+
+  <!-- Kripto Widget - Biraz daha aşağıda -->
+  <div class="panel crypto-widget draggable-element" data-element-id="crypto-widget" style="top: 160px; left: 40px;">
+    <h4>Kripto</h4>
+    <div id="cryptoData"></div>
+  </div>
+
+  <!-- Borsa Widget - Biraz daha aşağıda -->
+  <div class="panel stocks-widget draggable-element" data-element-id="stocks-widget" style="top: 160px; right: 40px;">
+    <h4>Borsa</h4>
+    <div id="stocksData"></div>
+  </div>
+
+  <!-- Haberler Widget - Biraz daha aşağıda -->
+  <div class="panel news-widget draggable-element" data-element-id="news-widget" style="top: 280px; left: 40px; width: 300px;">
+    <h4>Haberler</h4>
+    <div id="newsData">
+      <div class="news-item">Haberler yükleniyor...</div>
+    </div>
+  </div>
+
+  <!-- Günün Sözü Widget - Biraz daha aşağıda -->
+  <div class="panel quote-widget draggable-element" data-element-id="quote-widget" style="top: 280px; right: 40px; width: 300px;">
+    <h4>Günün Sözü</h4>
+    <div id="quoteData">
+      <div id="quoteText">"Yükleniyor..."</div>
+      <div id="quoteAuthor">- Yazar</div>
+    </div>
+  </div>
+
+  <!-- Pomodoro Widget - Biraz yukarıda -->
+  <div class="panel pomodoro-widget draggable-element" data-element-id="pomodoro-widget" style="bottom: 220px; left: 40px;">
+    <h4>Pomodoro</h4>
+    <div id="pomodoroTimer">25:00</div>
+    <div class="pomodoro-controls">
+      <button id="pomodoroStart">Başla</button>
+      <button id="pomodoroReset">Sıfırla</button>
+    </div>
+  </div>
+
+  <!-- Yapılacaklar Widget - Biraz yukarıda -->
+  <div class="panel todo-widget draggable-element" data-element-id="todo-widget" style="bottom: 220px; right: 40px; width: 250px;">
+    <h4>Yapılacaklar</h4>
+    <div class="todo-input">
+      <input type="text" id="todoInput" placeholder="Yeni görev...">
+      <button id="addTodo">+</button>
+    </div>
+    <div id="todoList"></div>
+  </div>
+
+  <!-- Notlar Widget - Biraz yukarıda -->
+  <div class="panel notes-widget draggable-element" data-element-id="notes-widget" style="bottom: 120px; left: 50%; transform: translateX(-50%); width: 300px;">
+    <h4>Hızlı Notlar</h4>
+    <textarea id="notesArea" placeholder="Notlarınızı buraya yazın..."></textarea>
+  </div>
+
+  <!-- Arama Kutusu - Orijinal pozisyon -->
+  <div class="search-container draggable-element" data-element-id="search-container">
+    <input type="text" id="searchInput" placeholder="Google'da ara...">
+  </div>
+
+  <!-- Alt Kısım - Orijinal pozisyon -->
+  <div class="bottom-container draggable-element" data-element-id="bottom-container">
+    <div class="button-group social-media visible"></div>
+    <div class="button-group ai-tools hidden"></div>
+  </div>
+
+  <!-- AI Butonu - Orijinal pozisyon -->
+  <button id="toggleBtn" class="toggle-btn draggable-element" data-element-id="toggle-btn">AI</button>
+
+  <!-- Layout mode indicator -->
+  <div id="layoutModeIndicator" class="layout-mode-indicator" style="display: none;">
+    <span>📐 Düzen Modu Aktif - Öğeleri sürükleyerek yerlerini değiştirin ve köşelerinden boyutlarını ayarlayın</span>
+    <button id="exitLayoutMode">Çıkış</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
