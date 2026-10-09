@@ -74,7 +74,7 @@ Instead of opening a blank, uninspiring page every time you press `Ctrl+T`, Smar
 You can install and run Smart Tab Pro in under 60 seconds without publishing to the Chrome Web Store:
 
 1. **Download the Code:**
-   * Click **Code -> Download ZIP** on GitHub and extract the folder to your computer (or run `git clone https://github.com/uahadov/smrt-tab-pro-teze-gtp5pro.git`).
+   * Click **Code -> Download ZIP** on GitHub and extract the folder to your computer (or run `git clone https://github.com/uahadov/smart-tab-extension.git`).
 2. **Open Extensions Page in your browser:**
    * **Chrome:** `chrome://extensions/`
    * **Edge:** `edge://extensions/`
