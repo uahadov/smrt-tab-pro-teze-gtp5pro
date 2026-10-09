@@ -1,112 +1,117 @@
-# 🚀 Smart Tab Pro — Ağıllı və Fərdiləşdirilə Bilən Yeni Tab İdarəetmə Paneli
+# 🚀 Smart Tab Pro — Intelligent & Fully Customizable New Tab Dashboard
 
 <p align="center">
   <img src="icons/icon128.png" alt="Smart Tab Pro Logo" width="100"/>
 </p>
 
 <p align="center">
-  <strong>Brauzerinizin hər yeni vərəqini şəxsi məhsuldarlıq və idarəetmə mərkəzinə çevirin.</strong>
+  <strong>Transform every new browser tab into your personalized productivity hub and live command center.</strong>
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Manifest-V3-blue?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Manifest V3">
   <img src="https://img.shields.io/badge/Platform-Chromium%20%7C%20Chrome%20%7C%20Edge%20%7C%20Brave-success?style=for-the-badge" alt="Chromium">
   <img src="https://img.shields.io/badge/Privacy-100%25%20Local%20Storage-brightgreen?style=for-the-badge" alt="Privacy First">
-  <img src="https://img.shields.io/badge/Status-Stable%20v3.0-orange?style=for-the-badge" alt="Version">
+  <img src="https://img.shields.io/badge/Version-v3.0%20Stable-orange?style=for-the-badge" alt="Version">
+  <img src="https://img.shields.io/badge/License-MIT-purple?style=for-the-badge" alt="License">
 </p>
 
 ---
 
-## 📌 Smart Tab Pro Nədir?
+## 📌 What is Smart Tab Pro?
 
-**Smart Tab Pro** — Chromium əsaslı brauzerlər (Google Chrome, Microsoft Edge, Brave, Opera və s.) üçün hazırlanmış güclü və zərif **Yeni Tab (New Tab)** uzantısıdır (extension).
+**Smart Tab Pro** is a modern, privacy-focused **New Tab extension** designed for Chromium-based browsers (Google Chrome, Microsoft Edge, Brave, Opera, etc.).
 
-Brauzerdə hər dəfə yeni səhifə açdıqda adi boş vərəq yerinə qarşınıza:
-* Canlı hava durumu, saat və tarix,
-* Tək kliklə süni intellekt köməkçiləri (ChatGPT, Gemini, DeepSeek və s.) və sosial şəbəkələr,
-* İşlərinizi planlaşdırmaq üçün Pomodoro taymeri, tapşırıq siyahısı (To-Do) və sürətli qeyd dəftəri,
-* Canlı kriptovalyuta qiymətləri və valyuta/birja məzənnələri,
-* Günün xəbərləri və motivasiya aforizmləri gəlir.
+Instead of opening a blank, uninspiring page every time you press `Ctrl+T`, Smart Tab Pro gives you an elegant, interactive dashboard tailored for peak daily productivity:
 
-Ən əsası isə — **ekrandakı hər bir elementi istədiyiniz yerə sürükləyə, ölçüsünü dəyişə və zövqünüzə uyğunlaşdıra bilərsiniz!**
-
----
-
-## ✨ Əsas Xüsusiyyətlər
-
-### 📐 1. Tam Sərbəst Düzen (Drag & Drop və Resize)
-* **İstədiyin yerə yerləşdir:** Sol üstdəki **📐 Düzen Modu** düyməsini aktivləşdirərək bütün vidcetləri siçanla sürükləyib ekranın istənilən guşəsinə qoya bilərsiniz.
-* **Ölçünü tənzimlə:** Hər bir vidcetin küncündən tutaraq ölçüsünü istəyinizə uyğun böyüdüb-kiçildə bilərsiniz.
-* Bütün dəyişikliklər avtomatik yadda saxlanılır. İstədiyiniz an tək kliklə ilkin vəziyyətə sıfırlamaq mümkündür.
-
-### 🤖 2. Süni İntellekt və Sosial Şəbəkələr Paneli
-* Ekranın aşağısında yerləşən **"AI"** düyməsi ilə dərhal iki rejim arasında keçid edin:
-  * **AI Alətləri:** ChatGPT, Google Gemini, Microsoft Copilot, DeepSeek, Meta AI.
-  * **Sosial Şəbəkələr:** YouTube, Instagram, Gmail, Telegram, WhatsApp, X (Twitter).
-* **Şəxsi linklər əlavə edin:** Sevimli saytlarınızı asanlıqla siyahıya daxil edin, istəmədiklərinizi silin və ya gizlədin.
-
-### 🍅 3. Məhsuldarlıq və Fokus Alətləri
-* **Pomodoro Taymeri:** Fokuslanaraq işləmək üçün daxili Pomodoro sistemi (iş və fasilə vaxtını tənzimləmə imkanı, səsli bildirişlər).
-* **Tapşırıq Siyahısı (To-Do):** Günlük görüləcək işləri qeyd edin, tamamlananların üstündən xətt çəkin.
-* **Sürətli Qeyd Bloku:** Vacib fikirləri, keçidləri və ya mətnləri dərhal yazmaq üçün həmişə əlinizin altında olan qeyd paneli.
-
-### 📈 4. Canlı Məlumat və İzləmə Vidcetləri
-* **Kripto İzləyicisi:** Bitcoin, Ethereum, Solana və onlarla digər kriptovalyutanın 24 saatlıq canlı qiymət dəyişikliyini izləyin.
-* **Valyuta və Birja Məzənnələri:** USD/TRY, EUR/TRY, GBP/TRY məzənnələri və Apple, Microsoft, Nvidia kimi dünya səhmlərinin göstəriciləri.
-* **Hava Durumu və Məkan:** Cari koordinatlarınıza əsasən canlı hava proqnozu və temperatur.
-* **Son Xəbərlər və Günün Sözü:** Gündəmdən xəbərdar olmaq üçün son xəbər başlıqları və gününüzə enerji qatacaq motivasiya kəlamları.
-
-### 🎨 5. Dizayn və Fərdiləşdirmə
-* **Hazır Temalar:** Qaranlıq (Dark), İşıqlı (Light), Günbatımı (Sunset), Okyanus (Ocean), Meşə (Forest), Bənövşəyi (Purple).
-* **Xüsusi Rəng Seçimi (Color Picker):** İstədiyiniz rəng kodunu seçərək interfeysi öz zövqünüzə uyğunlaşdırın.
-* **Şəxsi Fon Şəkli:** İstədiyiniz şəkli və ya divar kağızını arxa plan kimi yükləyin.
-* **Animasiyalar və Səs:** Bütün animasiyaları və bildiriş səslərini istəyə uyğun yandırıb-söndürün.
-
-### 🔒 6. Məxfilik və Məlumatların Təhlükəsizliyi
-* **100% Lokal:** Sizin qeydləriniz, tapşırıqlarınız və tənzimləmələriniz heç bir kənar serverə göndərilmir, birbaşa brauzerinizin daxili yaddaşında (`chrome.storage.local`) qorunur.
-* **Yedəkləmə (Export / Import):** Tənzimləmələrinizi JSON formatında kompüterinizə endirə və ya başqa brauzerə asanlıqla köçürə bilərsiniz.
+* **Freeform Layout (Drag & Drop + Resize):** Move, reposition, and resize any widget anywhere on your screen.
+* **Instant AI & Social Switcher:** Jump straight to leading AI tools (ChatGPT, Gemini, Copilot, DeepSeek, Meta AI) or social networks with a single click.
+* **Built-in Focus Suite:** Stay in the zone with an integrated Pomodoro timer, simple To-Do checklist, and fast scratchpad notes.
+* **Live Market & Information Feeds:** Track crypto prices, stock & currency rates, local weather, and news headlines in real time.
+* **100% Private & Offline-First:** Everything stays safely stored in your browser's local storage. Zero third-party telemetry, zero tracking.
 
 ---
 
-## 📥 Quraşdırma Qaydası (Addım-addım)
+## ✨ Key Features
 
-Uzantını brauzerinizə əlavə etmək üçün cəmi 1 dəqiqə kifayətdir:
+### 📐 1. Freeform Layout Engine (Drag & Drop + Resize)
+* **Custom Positioning:** Click the **📐 Layout Mode** button in the top-left corner to unlock the canvas. Drag any widget anywhere you want.
+* **Corner Resizing:** Grab the bottom-right corner handles to adjust widget dimensions to match your display resolution and personal taste.
+* **Persistent State:** All positions and dimensions save automatically to browser storage. One-click layout reset is available at any time.
 
-1. **Repozitoriyanı yükləyin:**
-   * Bu səhifədən **Code -> Download ZIP** seçərək arxivi kompüterinizə endirin və qovluğa çıxarın (və ya `git clone` edin).
-2. **Brauzerin uzantılar səhifəsini açın:**
-   * Google Chrome üçün ünvana daxil olun: `chrome://extensions/`
-   * Microsoft Edge üçün: `edge://extensions/`
-   * Brave üçün: `brave://extensions/`
-3. **Developer rejimini aktiv edin:**
-   * Səhifənin yuxarı sağ küncündəki **"Developer mode" (Tərtibatçı rejimi)** keçiricisini yandırın.
-4. **Qovluğu yükləyin:**
-   * Sol üstdəki **"Load unpacked" (Paketlenməmiş uzantı yüklə)** düyməsinə klikləyin.
-   * Yüklədiyiniz layihə qovluğunu seçin.
-5. **Hazırdır!** Brauzerdə yeni vərəq (+ düyməsi) açın və Smart Tab Pro-nun rahatlığından zövq alın.
+### 🤖 2. Fast AI & Social Media Dock
+* Toggle seamlessly between your most-used platforms with the bottom **"AI"** switch:
+  * **AI Assistants:** ChatGPT, Google Gemini, Microsoft Copilot, DeepSeek, and Meta AI.
+  * **Social & Communication:** YouTube, Instagram, Gmail, Telegram, WhatsApp, and X (Twitter).
+* **Custom Shortcuts:** Easily bookmark your own favourite websites, customize categories, and remove or hide unused default links.
 
----
+### 🍅 3. Built-in Productivity Suite
+* **Pomodoro Timer:** Configurable work & break cycles (default 25m work / 5m break) with auditory completion chimes.
+* **Interactive To-Do List:** Jot down priority tasks, mark them complete, and clean up finished items with ease.
+* **Quick Scratchpad:** Auto-saving notes area for temporary thoughts, copy-pasting snippets, or phone numbers.
 
-## 🛠️ İstifadə İpucları
+### 📈 4. Live Market Data & Real-Time Widgets
+* **Crypto Tracker:** Real-time prices and 24h percentage changes powered by the CoinGecko API (Bitcoin, Ethereum, Solana, and 50+ coins). Add or remove coins dynamically.
+* **Currencies & Global Equities:** Live exchange rates (USD/TRY, EUR/TRY, GBP/TRY) and major stock indicators (Apple, Microsoft, Nvidia, Tesla, and more).
+* **Live Weather & Geolocation:** Automatic location lookup via OpenStreetMap and instant temperature/humidity via OpenWeatherMap.
+* **News & Daily Inspiration:** Live RSS feeds for breaking headlines and daily handpicked motivational quotes.
+* **Central Google Search:** Instant search bar right in the center for distraction-free queries.
 
-* **Tənzimləmələr:** Sağ üstdəki çarx işarəsinə (**⚙️**) klikləyərək istəmədiyiniz vidcetləri gizlədə, mövzunu dəyişə və ya yeni kripto/səhmlər əlavə edə bilərsiniz.
-* **Sərbəst yerləşdirmə:** Sol üstdəki xətkeş işarəsinə (**📐**) klikləyərək düzen rejimini açın, vidcetlərin yerini və ölçüsünü istədiyiniz kimi dəyişin.
-* **Sürətli axtarış:** Səhifənin ortasındakı axtarış xanasına söz yazıb `Enter` basdıqda birbaşa Google-da axtarış edəcək.
+### 🎨 5. Personalization & Theming
+* **Curated Color Themes:** Dark, Light, Sunset, Ocean, Forest, and Purple.
+* **Custom Color Picker:** Set your own accent gradient to match your wallpaper and setup.
+* **Custom Wallpaper Upload:** Upload any personal photo or background image directly from your local drive.
+* **Animation & Audio Controls:** Toggle UI transitions and timer sounds on or off based on your preference.
 
----
-
-## 💻 İstifadə Olunan Texnologiyalar
-
-* **Frontend:** HTML5, CSS3 (Modern Flexbox, CSS Grid, CSS Variables), Vanilla JavaScript (ES6+).
-* **Extension Platform:** Chrome Extensions Manifest V3 API (`chrome.storage.local`).
-* **Məlumat Mənbələri (APIs):**
-  * [OpenWeatherMap API](https://openweathermap.org/) — Hava proqnozu məlumatları.
-  * [CoinGecko API](https://www.coingecko.com/) — Canlı kriptovalyuta qiymətləri.
-  * [ExchangeRate API](https://www.exchangerate-api.com/) — Valyuta məzənnələri.
-  * [OpenStreetMap Nominatim](https://nominatim.openstreetmap.org/) — Şəhər və məkan təyini.
+### 🔒 6. Privacy & Data Portability
+* **No Cloud Account Required:** Works entirely client-side using `chrome.storage.local`.
+* **Backup & Restore (JSON Export/Import):** Export your custom widgets, shortcuts, notes, and layout to a single `.json` file and restore it on any machine in seconds.
 
 ---
 
-## 📄 Lisenziya
+## 📥 Quick Installation Guide (Unpacked Extension)
 
-Bu layihə [MIT](LICENSE) lisenziyası altında təqdim olunur. Sərbəst şəkildə istifadə edə, dəyişdirə və paylaşa bilərsiniz.
+You can install and run Smart Tab Pro in under 60 seconds without publishing to the Chrome Web Store:
+
+1. **Download the Code:**
+   * Click **Code -> Download ZIP** on GitHub and extract the folder to your computer (or run `git clone https://github.com/uahadov/smrt-tab-pro-teze-gtp5pro.git`).
+2. **Open Extensions Page in your browser:**
+   * **Chrome:** `chrome://extensions/`
+   * **Edge:** `edge://extensions/`
+   * **Brave:** `brave://extensions/`
+3. **Enable Developer Mode:**
+   * Switch on the **"Developer mode"** toggle in the top-right corner.
+4. **Load the Extension:**
+   * Click the **"Load unpacked"** button in the top-left corner.
+   * Select the extracted folder containing `manifest.json`.
+5. **Enjoy!** Open a new tab (`Ctrl + T` or `Cmd + T`) to see your brand-new dashboard.
+
+---
+
+## 🛠️ Usage & Tips
+
+| Icon / Action | What it does |
+| :--- | :--- |
+| **⚙️ Gear Icon (Top-Right)** | Opens the settings panel to toggle widgets, change themes, manage tracked cryptos/stocks, and export backup files. |
+| **📐 Ruler Icon (Top-Left)** | Enables freeform Drag & Drop and Resizing mode for all widgets. |
+| **🤖 "AI" Button (Bottom)** | Toggles the bottom dock between AI assistants and Social media channels. |
+| **🔍 Search Bar (Center)** | Type any query and hit `Enter` to search directly on Google. |
+
+---
+
+## 💻 Tech Stack
+
+* **Front-end:** Vanilla JavaScript (ES6+), HTML5, CSS3 (Modern Flexbox, CSS Grid, Custom Properties).
+* **Extension Platform:** Chrome Extensions API — **Manifest V3** (`chrome.storage.local`, `chrome_url_overrides`).
+* **External APIs:**
+  * [CoinGecko API](https://www.coingecko.com/) — Real-time cryptocurrency prices.
+  * [ExchangeRate API](https://www.exchangerate-api.com/) — Fiat currency conversion rates.
+  * [OpenWeatherMap API](https://openweathermap.org/) — Local weather reports.
+  * [OpenStreetMap Nominatim](https://nominatim.openstreetmap.org/) — Reverse geocoding for city & country.
+  * [RSS2JSON API](https://rss2json.com/) — RSS feed parsing for news.
+
+---
+
+## 📄 License
+
+Distributed under the [MIT License](LICENSE). You are free to use, modify, and build upon this project.
